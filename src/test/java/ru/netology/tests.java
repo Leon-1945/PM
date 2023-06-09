@@ -1,19 +1,22 @@
 package ru.netology;
 
+import io.restassured.specification.RequestSpecification;
 import org.junit.jupiter.api.Test;
+
+import java.lang.management.GarbageCollectorMXBean;
 
 public class tests {
     @Test
-// Given - When - Then
+    void ShouldReturnDemoAccounts()  {
+        // Given - When - Then
 // Предусловия
-    given()
-  .baseUri("https://postman-echo.com")
-  .body("some data") // отправляемые данные (заголовки и query можно выставлять аналогично)
-// Выполняемые действия
-.when()
-  .post("/post")
-    // Проверки
-.then()
-  .statusCode(200)
-  .body("data": "some value");
+        given()
+                .baseUri("https://postman-echo.com")
+                .body("12")
+                .when()
+                .post("/post")
+                .then()
+                .statusCode(200)
+                .body("12")
+        ;}
 }
