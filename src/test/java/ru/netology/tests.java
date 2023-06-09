@@ -1,22 +1,22 @@
 package ru.netology;
 
-import io.restassured.specification.RequestSpecification;
 import org.junit.jupiter.api.Test;
 
-import java.lang.management.GarbageCollectorMXBean;
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
 
 public class tests {
     @Test
-    void ShouldReturnDemoAccounts()  {
-        // Given - When - Then
-// Предусловия
+    void shouldReturnAccounts() {
         given()
                 .baseUri("https://postman-echo.com")
-                .body("12")
+                .body("some data")
                 .when()
                 .post("/post")
+
                 .then()
                 .statusCode(200)
-                .body("12")
-        ;}
+                .body("data", equalTo("some data"));
+
+    }
 }

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.netology.tests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-06-09T10:32:05" hostname="SAR-EMURAVLEV" time="2.264">
+  <properties/>
+  <testcase name="shouldReturnAccounts()" classname="ru.netology.tests" time="2.264"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
